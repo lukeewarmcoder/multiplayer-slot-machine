@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multiplayer Slot Machine</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="project.js" defer></script>
+</head>
+<body>
+
+<div class="container">
+  <h1>🎰 Multiplayer Slot</h1>
+  <div class="handle"></div>
+
+  <!-- AUTH -->
+  <div class="login-box" id="authBox">
+    <input id="username" placeholder="Username (signup only)">
+    <input id="email" type="email" placeholder="Email">
+    <input id="password" type="password" placeholder="Password">
+    <div class="auth-buttons">
+      <button onclick="signup()">SIGN UP</button>
+      <button onclick="login()">LOGIN</button>
+    </div>
+  </div>
+
+  <!-- USER BAR -->
+  <div class="user-bar hidden" id="userBar">
+    <button onclick="logout()">LOGOUT</button>
+    <button onclick="toggleSound()">🔊 SOUND</button>
+  </div>
+
+  <!-- BALANCE -->
+  <div class="balance-box hidden" id="balanceBox">
+    Balance: $<span id="balance">0</span>
+  </div>
+
+  <!-- JACKPOT -->
+  <div class="jackpot-box hidden">
+    💰 JACKPOT: $<span id="jackpot">5000</span>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats-box hidden">
+    <h3>📊 Stats</h3>
+    <p>🎮 Spins: <span id="stat-spins">0</span></p>
+    <p>💰 Total Won: $<span id="stat-winnings">0</span></p>
+    <p>🏆 Best Win: $<span id="stat-biggest">0</span></p>
+    <p>📈 RTP: <span id="stat-rtp">0%</span></p>
+    <p>🎯 Win Odds: <span id="stat-win-odds">~27%</span></p>
+    <p>💎 Jackpot Odds: <span id="stat-jackpot-odds">1 in 300</span></p>
+  </div>
+
+  <!-- CONTROLS -->
+  <div class="controls hidden" id="gameControls">
+    <input id="deposit" type="number" placeholder="Deposit Amount">
+    <input id="lines" type="number" placeholder="Lines (1–3)">
+    <input id="bet" type="number" placeholder="Bet per Line">
+    <button onclick="play()">SPIN</button>
+  </div>
+
+  <!-- SLOT -->
+  <div class="slot hidden" id="slotArea">
+    <div class="row" id="row0">A | B | C</div>
+    <div class="row" id="row1">B | C | D</div>
+    <div class="row" id="row2">C | D | A</div>
+  </div>
+
+  <!-- LEADERBOARD -->
+  <div class="leaderboard-box">
+    <h3>🏆 Leaderboard</h3>
+    <ol id="leaderboard"></ol>
+  </div>
+
+  <!-- ADMIN -->
+  <div class="admin-box hidden" id="adminBox">
+    <h3>🛠 Admin</h3>
+    <button onclick="resetJackpot()">Reset Jackpot</button>
+  </div>
+
+  <div class="result" id="result">Login to start 🎰</div>
+</div>
+
+</body>
+</html>
