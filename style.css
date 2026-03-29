@@ -96,3 +96,79 @@ h1 { text-align: center; }
   background: #888;
   border-radius: 8px;
 }
+
+/* Deposit row */
+.deposit-row {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.deposit-row input {
+  flex: 1;
+}
+
+.deposit-row button {
+  background: linear-gradient(180deg, #3b82f6, #2563eb);
+  color: white;
+}
+
+/* Symbol spans */
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.symbol {
+  display: inline-block;
+  min-width: 40px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.symbol-A { color: #fbbf24; }
+.symbol-B { color: #a78bfa; }
+.symbol-C { color: #34d399; }
+.symbol-D { color: #9ca3af; }
+
+/* Stats box */
+.stats-box {
+  margin-top: 10px;
+  padding: 10px;
+  background: #0f172a;
+  border-radius: 10px;
+}
+
+.stats-box h3 {
+  margin: 0 0 6px 0;
+}
+
+.stats-box p {
+  margin: 2px 0;
+  font-size: 14px;
+}
+
+/* Balance & Jackpot boxes */
+.balance-box,
+.jackpot-box {
+  text-align: center;
+  padding: 8px;
+  margin: 6px 0;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.jackpot-box {
+  background: linear-gradient(180deg, #854d0e, #a16207);
+  color: #fef08a;
+}
+
+/* Result */
+.result {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  min-height: 28px;
+}
